@@ -30,3 +30,4 @@ Example: python3 ciphercheck.py -u https://example.com -c cipherlist.txt -r all
 - This technique only makes sense with HTTPS-based websites.
 - The cipherlist was obtained from https://curl.se/docs/ssl-ciphers.html
 - The tls_max thing is tested in it's multiple possible values (1.0, 1.1, 1.2 and 1.3) because I noticed that curl just using --ciphers was offering more ciphers to the server instead of just the one I wanted it to offer, and this fixed it, apparently.
+- The curl version I used when I was writing the script is: curl 7.88.1 (x86_64-pc-linux-gnu) libcurl/7.88.1 OpenSSL/3.0.8 zlib/1.3 brotli/1.0.9 zstd/1.5.5 libidn2/2.3.3 libpsl/0.21.2 (+libidn2/2.3.3) libssh2/1.10.0 nghttp2/1.52.0 librtmp/2.3. Release-Date: 2023-02-20. Just in case someone needs to replicate the exact conditions.
