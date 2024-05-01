@@ -4,6 +4,8 @@ This tool checks if a specific TLS ciphersuite is able to bypass a WAF.
 
 I came across this blogpost: https://blog.pwn.al/waf/bypass/ssl/2018/07/02/web-application-firewall-bypass.html and I thought it could be interesting to automate this a little bit.
 
+The tool just checks if the results retrieved by curl vary from the results of the first request by using different ciphersuites. It makes sense to test this against sites returning generic 403 codes (but knowing somehow there is a WAF)  or "blocked-by-WAF" error pages.
+
 ## Installation
 
 - git clone https://github.com/stark0de/ciphercheck
